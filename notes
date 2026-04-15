@@ -1,0 +1,30 @@
+//HTML
+// json_encode($out) -> Přeloží PHP pole do univerzálního textového formátu JSON, kterému rozumí JavaScript.
+// fetch('php/data.php') -> "Asynchronní dotaz". Web nečeká na načtení, ale na pozadí si jde pro data do PHP.
+// .map(item => `...`) -> Cyklus, který projde každou řádku z CSV a "obalí" ji do HTML šablony karty.
+// setInterval(timer, 1000) -> Spouštěč, který každých 1000 milisekund (1 vteřina) znovu přepočítá čas
+// e.target.getAttribute('data-type') -> Zjistí, na které tlačítko (Dospělý/Student) jsi klikl, a vezme z něj název tarifu.
+// scrollIntoView({ behavior: 'smooth' }) -> Příkaz pro prohlížeč, aby plynule sjel dolů k formuláři.
+
+//CSS
+/* position: sticky -> Prvek (navigace) zůstane přilepený na vrchu okna i při skrolování dolů. */
+/* col-lg-4 col-md-6 -> Bootstrap grid: Na desktopu zabere prvek 4/12 (třetina), na tabletu 6/12 (polovina). */
+/* @media (max-width: 576px) -> Pravidlo, které se aktivuje jen na mobilech. Zde zmenšujeme písmo, aby nepřetékalo. */
+/* filter: grayscale(1) -> CSS filtr, který mapě nebo obrázku vezme barvy, aby ladily do tmavého designu. */
+
+//PHP
+// header('Content-Type: application/json') — Říká prohlížeči, že výstupem nejsou webovky, ale surová data JSON.
+// fopen($file, "r") — Otevře soubor s výstavami v režimu "read" (pouze pro čtení).
+// fgetcsv($handle, 1000, ",") — Přečte jeden řádek z CSV, najde v něm čárky a rozdělí text do pole (názvy, popisy).
+// while(...) — Cyklus, který běží tak dlouho, dokud v souboru CSV zbývají nějaké řádky.
+// json_encode($out) — Přeloží výsledné PHP pole do formátu JSON, kterému rozumí JavaScript v prohlížeči.
+
+//JavaScript
+// fetch('php/data.php') — AJAX požadavek: JS si "odskočí" na server pro data z CSV, aniž by se stránka musela obnovit.
+// async / await — Říká prohlížeči, aby počkal, až data ze serveru dorazí, a pak teprve pokračoval ve vykreslování.
+// .map(item => ...) — Projde všechna data z CSV a každou položku "zabalí" do HTML kódu pro kartu výstavy.
+// innerHTML — Příkaz, který vloží vygenerovaný HTML kód (karty výstav) přímo do připraveného gridu na stránce.
+// setInterval(..., 1000) — Časovač, který každou 1 vteřinu spustí funkci odpočtu (countdown).
+// getAttribute('data-type') — Zjistí z HTML atributu tlačítka, na který tarif (Dospělý/Student) uživatel klikl.
+// classList.remove('d-none') — Odebere třídu, která skrývá formulář, takže se po výběru vstupenky okamžitě objeví.
+// scrollIntoView({ behavior: 'smooth' }) — Plynule odroluje stránku dolů na formulář, aby ho uživatel nemusel hledat.

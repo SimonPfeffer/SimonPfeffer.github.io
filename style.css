@@ -1,0 +1,50 @@
+:root { --accent: #ff0000; --dark: #111; }
+body { font-family: 'Outfit', sans-serif; background: #000; scroll-behavior: smooth; overflow-x: hidden; }
+.fw-900 { font-weight: 900; }
+.ls-5 { letter-spacing: 5px; }
+
+/* HERO */
+.hero-section {
+    height: 85vh;
+    background: url('img/hero.jpg') center/cover no-repeat fixed;
+    position: relative;
+    background-color: #000;
+}
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+/* PROGRAM CARDS */
+.ex-card { background: #080808; border: 1px solid #222; transition: 0.3s; border-radius: 0; }
+.ex-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.ex-img { height: 250px; background-size: cover; background-position: center; border-bottom: 3px solid var(--accent); }
+
+/* TICKETS */
+.ticket-card { transition: 0.3s; border-radius: 0; }
+.ticket-card:hover { transform: scale(1.03); z-index: 10; }
+.ticket-badge {
+    position: absolute; top: 15px; right: -30px; padding: 5px 35px;
+    transform: rotate(45deg); color: white; font-weight: 900; font-size: 0.7rem;
+}
+
+/* RESPONSIVITY */
+@media (max-width: 576px) {
+    .display-1 { font-size: 3.5rem; }
+}
+.accordion-button:not(.collapsed) { background-color: var(--accent); color: white; }
+.form-control:focus { box-shadow: none; border-color: var(--accent); }
+
+.card-body h4 {
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #ffffff !important; /* Bílá barva popisku */
+    display: block !important; /* Zajistí, že se text neskryje */
+    font-size: 0.9rem;
+}
+
+.card {
+    overflow: hidden; /* Aby obrázek nepřekrýval rohy karty */
+}
