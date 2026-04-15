@@ -1,50 +1,87 @@
-:root { --accent: #ff0000; --dark: #111; }
-body { font-family: 'Outfit', sans-serif; background: #000; scroll-behavior: smooth; overflow-x: hidden; }
-.fw-900 { font-weight: 900; }
-.ls-5 { letter-spacing: 5px; }
+/* ZÁKLADNÍ NASTAVENÍ */
+:root {
+    --accent: #c22237;
+}
 
-/* HERO */
-.hero-section {
-    height: 85vh;
-    background: url('img/hero.jpg') center/cover no-repeat fixed;
-    position: relative;
+body {
+    font-family: 'Outfit', sans-serif;
     background-color: #000;
 }
+
+.fw-900 { font-weight: 900; }
+.ls-5 { letter-spacing: 5px; }
+.text-danger { color: var(--accent) !important; }
+
+/* HERO SEKCE */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('img/hero.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
 .hero-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, transparent, rgba(0,0,0,0.9));
 }
 
-/* PROGRAM CARDS */
-.ex-card { background: #080808; border: 1px solid #222; transition: 0.3s; border-radius: 0; }
-.ex-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.ex-img { height: 250px; background-size: cover; background-position: center; border-bottom: 3px solid var(--accent); }
+/* SLIDER / HIGHLIGHTS */
+.slider-box {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
 
-/* TICKETS */
-.ticket-card { transition: 0.3s; border-radius: 0; }
-.ticket-card:hover { transform: scale(1.03); z-index: 10; }
+.slide-1 { background-image: url('img/s1.jpg'); }
+.slide-2 { background-image: url('img/s2.jpg'); }
+
+.slider-caption {
+    max-width: 400px;
+}
+
+/* MAPA */
+.google-map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    filter: grayscale(1) invert(0.9);
+}
+
+/* VSTUPENKY FORMULÁŘ */
+.booking-input {
+    background-color: #111 !important;
+    color: #fff !important;
+    border: 1px solid #333 !important;
+    border-radius: 0 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
 .ticket-badge {
-    position: absolute; top: 15px; right: -30px; padding: 5px 35px;
-    transform: rotate(45deg); color: white; font-weight: 900; font-size: 0.7rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
 }
 
-/* RESPONSIVITY */
-@media (max-width: 576px) {
-    .display-1 { font-size: 3.5rem; }
-}
-.accordion-button:not(.collapsed) { background-color: var(--accent); color: white; }
-.form-control:focus { box-shadow: none; border-color: var(--accent); }
-
-.card-body h4 {
-    margin-bottom: 10px;
+/* FAQ */
+.faq-container {
+    max-width: 800px;
 }
 
-.card-body p {
-    color: #ffffff !important; /* Bílá barva popisku */
-    display: block !important; /* Zajistí, že se text neskryje */
-    font-size: 0.9rem;
+.accordion-button:not(.collapsed) {
+    background-color: var(--accent) !important;
+    color: white !important;
 }
 
-.card {
-    overflow: hidden; /* Aby obrázek nepřekrýval rohy karty */
+.accordion-button::after {
+    filter: invert(1);
 }
+
+/* OSTATNÍ */
+.italic { font-style: italic; }
+.x-small { font-size: 0.75rem; }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
